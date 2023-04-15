@@ -81,7 +81,8 @@ int main() {
     MyCar car1("BMW", "X7", 2021, 57, 0, 0, 0, 0, 0);
     MyCar car2("Maruti", "Alto", 2020, 79, 23, 97, 0, 0, 0);
     // How might a car operate within a three-dimensional space, as one would typically expect it to function on a two-dimensional plane?
-    // It should be a plane 
+    // It should be a air craft
+    
     car1.accelerate(10, 0, 0);
     car1.move();
     car2.brake(5, 0, 0);
