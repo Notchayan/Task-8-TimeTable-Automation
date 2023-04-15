@@ -8,31 +8,41 @@ public:
     string make;
     string model;
     int year;
-    int speed;
+    int speed_x;
+    int speed_y;
+    int speed_z;
     int x;
     int y;
     int z;
 
-    MyCar(string make,string model, int year, int speed, int x, int y,int z)
-        : make(make), model(model), year(year), speed(speed), x(x), y(y), z(z) {}
+    MyCar(string make,string model, int year, int speed_x,int speed_y, int speed_z, int x, int y,int z)
+        : make(make), model(model), year(year), speed_x(speed_x),speed_y(speed_y),speed_z(speed_z), x(x), y(y), z(z) {}
 
-    void accelerate(int speed_increment) {
-        speed += speed_increment;
+    void accelerate(int speed_increment_x,int speed_increment_y,int speed_increment_z) {
+        speed_x += speed_increment_x;
+        speed_y += speed_increment_y;
+        speed_z += speed_increment_z;
     }
 
-    void brake(int speed_decrement) {
-        speed -= speed_decrement;
-        if (speed < 0) {
-            speed = 0;
+    void brake(int speed_decrement_x, int speed_decrement_y, int speed_decrement_z) {
+        speed_x -= speed_decrement_x;
+        speed_y -= speed_decrement_y;
+        speed_z -= speed_decrement_z;
+        if (speed_x < 0) {
+            speed_x = 0;
         }
-    }
+        if(speed_y < 0){
+            speed_y = 0;
+        }
+        if(speed_z < 0){
+            speed_z = 0;
+        }
 
-    void move() {
-        x += speed;
-        y += speed;
-        z += speed;
+    void move(){
+        x += speed_x;
+        y += speed_y;
+        z += speed_z;
     }
-
     bool detect_collision(const MyCar& car2) const {
         return x == car2.x && y == car2.y && z == car2.z;
     }
@@ -41,15 +51,23 @@ public:
         int dx = car2.x - x;
         int dy = car2.y - y;
         int dz = car2.z - z;
-        int ds = car2.speed - speed;
+        int ds_x = car2.speed_x - speed_x;
+        int ds_y = car2.speed_y - speed_y;
+        int ds_z = car2.speed_z - speed_z;
 
-        if (ds <= 0) {
+        if (ds_x <= 0) {
+            return -1;
+        }
+        if (ds_y <= 0) {
+            return -1;
+        }
+        if (ds_z <= 0) {
             return -1;
         }
 
-        double time_1 = dx / static_cast<double>(ds);
-        double time_2 = dy / static_cast<double>(ds);
-        double time_3 = dz / static_cast<double>(ds);
+        double time_1 = dx / static_cast<double>(ds_x);
+        double time_2 = dy / static_cast<double>(ds_y);
+        double time_3 = dz / static_cast<double>(ds_z);
 
         if (time_1 == time_2 && time_1 == time_3 && time_2 == time_3) {
             return time_1;
@@ -60,12 +78,12 @@ public:
 };
 
 int main() {
-    MyCar car1("BMW", "X7", 2021, 57, 0, 0,0);
-    MyCar car2("Maruti", "Alto",2020, 79, 23, 97,0);
+    MyCar car1("BMW", "X7", 2021, 57, 0, 0, 0, 0, 0);
+    MyCar car2("Maruti", "Alto", 2020, 79, 23, 97, 0, 0, 0);
 
-    car1.accelerate(10);
+    car1.accelerate(10, 0, 0);
     car1.move();
-    car2.brake(5);
+    car2.brake(5, 0, 0);
     car2.move();
     double time = car1.time_of_collision(car2);
     bool collision = car1.detect_collision(car2);
