@@ -37,6 +37,7 @@ public:
         if(speed_z < 0){
             speed_z = 0;
         }
+    }
 
     void move(){
         x += speed_x;
@@ -74,7 +75,9 @@ public:
         }
 
         return -1;
-    }
+        
+        }
+        
 };
 
 int main() {
