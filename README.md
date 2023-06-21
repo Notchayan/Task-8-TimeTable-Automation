@@ -43,17 +43,6 @@ The following things are required to properly setup and run this extension:
 
 Once you have successfully installed the extension, navigate to Pingala and open your timetable. The extension will automatically read, interpret, and notify you about upcoming classes based on the information provided in the timetable.
 
-## Contributing
-
-We welcome contributions to this project. Please feel free to submit issues or pull requests.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgements
-
-We would like to express our deepest appreciation to all those who provided us the possibility to complete this extension.
 
 ## Contact
 
