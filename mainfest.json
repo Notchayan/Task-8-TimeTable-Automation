@@ -1,0 +1,19 @@
+{
+    "name": "Time table",
+    "version": "1",
+    "manifest_version": 3,
+    "permissions": ["scripting", "storage","notifications","alarms", "activeTab","tabs"],
+    "action":{
+        "default_popup": "popup.html"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content.js"]
+        }
+    ]
+}
