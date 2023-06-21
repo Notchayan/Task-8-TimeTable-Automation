@@ -52,4 +52,23 @@ Please feel free to contact us if you have any questions or need further informa
 
 This extension is for educational purposes and is not affiliated with or endorsed by Pingala.
 
+## Journey to build it 
+
+When I embarked on developing the Pingala Timetable Helper Chrome Extension, the initial challenge was accessing the HTML text of the timetable. Navigating the intricacies of JavaScript DOM (Document Object Model) manipulation was daunting but essential. It was critical to correctly map each subject with the appropriate time and specific day on the timetable.
+
+Endless hours were spent studying the structure of the Pingala website to identify the root HTML elements of the timetable. There were moments of doubt and confusion, but persistence paid off. The structure of the site started to make sense, and I was able to locate the right elements.
+
+To understand the nuances of Chrome extension data transfer, DOM manipulation, and the purpose of different JavaScript files, I utilized the comprehensive documentation provided by Chrome (https://developer.chrome.com/docs/extensions/). This resource proved invaluable, acting as a beacon of knowledge that guided my learning and development process.
+
+Reflecting on the entire experience, I've realized the immense possibilities that lie in technology exploration. It's easy to get caught up in mainstream technologies and overlook less-known ones. However, it is these underrated technologies that hold the potential to simplify our daily lives when correctly incorporated.
+
+The journey through developing this extension was a voyage of discovery. It wasn't merely about creating a functional tool; it was also a learning journey that broadened my understanding of DOM manipulation, Chrome extensions, and the power of perseverance.
+
+This experience has reinforced my belief that learning is a continuous process, and every challenge we face is an opportunity for growth. I am eager to apply this mindset and the technical skills acquired to future projects.
+![IMAGE 2023-06-22 03:57:40](https://github.com/Notchayan/Task-8-TimeTable-Automation/assets/130827975/f41e1ebd-fb8a-4e8e-9faf-73d8b628a3fb).
+
+## NOTE 
+
+The commitment make on popup.js and popup.html are just to exchange there code I have commited exchanged code earlier.)(done at 4 AM 22 JUN, when I realised they are exchanged)
+
 **Happy coding!**
