@@ -1,5 +1,5 @@
 {
-    "name": "Time table",
+    "name": "Pingala Timetable Helper Chrome Extension",
     "version": "1",
     "manifest_version": 3,
     "permissions": ["scripting", "storage","notifications","alarms", "activeTab","tabs"],
